@@ -12,11 +12,10 @@
 
 int main(void)
 {
-	int n;
+	int n, num;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	int num;
 	num = n % 10;
 
 	printf("Last digit of %i is %i ", n, num);
