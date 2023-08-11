@@ -14,7 +14,7 @@ int main(void)
 
 	for (; c <= '9'; c++)
 	{
-		printf(c);
+		putchar(c);
 	}
 	for (; c6 <= 'f'; c6++)
 	{
