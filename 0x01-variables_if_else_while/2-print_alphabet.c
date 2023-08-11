@@ -12,11 +12,10 @@ int main(void)
 {
 	char c = 'a';
 
-	for (int i = 0; i < 26; i++)
+	for (c; c <= 'z'; c++)
 	{
 		putchar(c);
 		putchar('\n');
-		c++;
 	}
 
 
