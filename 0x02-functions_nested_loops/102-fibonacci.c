@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	int i = 2, nums[50], num = 0;
+	int i = 2, nums[50];
 
 	nums[0] = 1;
 	nums[1] = 2;
@@ -17,8 +17,8 @@ int main(void)
 
 	for (; i < 50; i++)
 	{
-		num = nums[i - 2] + nums[i - 1];
-		printf(", %i", num);
+		nums[i] = nums[i - 2] + nums[i - 1];
+		printf(", %i", nums[i]);
 	}
 	printf("\n");
 	return (0);
