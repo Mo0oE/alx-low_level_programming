@@ -10,12 +10,10 @@
 int main(void)
 {
 	int i = 2;
-	unsigned long int nums[50], sum = 0;
+	unsigned long int nums[50], sum = 2;
 
 	nums[0] = 1;
 	nums[1] = 2;
-
-	printf("%lu, %lu", nums[0], nums[1]);
 
 	for (; i < 50; i++)
 	{
