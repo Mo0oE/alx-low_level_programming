@@ -10,13 +10,14 @@ void print_times_table(int n)
 {
 	int c, r = 0, res = 0;
 
+	if (n > 15 || n < 0)
+		return;
 	for (; r <= n; r++)
 	{
 		_putchar ('0');
 		for (c = 1; c <= n; c++)
 		{
 			res = c  * r;
-
 			if (res < 10)
 			{
 				_putchar (',');
@@ -44,7 +45,4 @@ void print_times_table(int n)
 		}
 		_putchar ('\n');
 	}
-
-
-
 }
