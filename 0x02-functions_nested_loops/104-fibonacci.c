@@ -13,7 +13,6 @@ int main(void)
 	int i;
 
 	printf("%lu, %lu", n1, n2);
-
 	for (i = 2; i < 88; i++)
 	{
 		n = n1 + n2;
@@ -25,7 +24,6 @@ int main(void)
 	n2_h1 = n2 / 100000000000;
 	n1_h2 = n1 % 100000000000;
 	n2_h2 = n2 % 100000000000;
-
 	for (i = 88; i < 98; i++)
 	{
 		n_h1 = n1_h1 + n2_h1;
@@ -51,4 +49,3 @@ int main(void)
 	putchar('\n');
 	return (0);
 }
-
