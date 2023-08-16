@@ -5,23 +5,43 @@
  * main - start
  * Description: None
  * Return: 0
-*/
+ */
 
 int main(void)
 {
-	int i = 2;
-	unsigned long int nums[98];
+	unsigned long int n, n_h1, n_h2, n1 = 1, n2 = 2, n1_h1, n1_h2, n2_h1, n2_h2;
+	int i;
 
-	nums[0] = 1;
-	nums[1] = 2;
+	printf("%lu, %lu", n1, n2);
 
-	printf("%lu, %lu", nums[0], nums[1]);
-
-	for (; i < 98; i++)
+	for (i = 2; i < 88; i++)
 	{
-		nums[i] = nums[i - 2] + nums[i - 1];
-		printf(", %lu", nums[i]);
+		n = n1 + n2;
+		printf(", %lu", n);
+		n1 = n2;
+		n2 = n;
 	}
-	printf("\n");
+	n1_h1 = n1 / 100000000000;
+	n2_h1 = n2 / 100000000000;
+	n1_h2 = n1 % 100000000000;
+	n2_h2 = n2 % 100000000000;
+
+	for (i = 88; i < 98; i++)
+	{
+		n_h1 = n1_h1 + n2_h1;
+		n_h2 = n1_h2 + n2_h2;
+		if (n_h2 >= 100000000000)
+		{
+			n_h1++;
+			n_h2 = n_h2 % 100000000000;
+		}
+		printf(", %lu%lu", n_h1, n_h2);
+		n1_h1 = n2_h1;
+		n1_h2 = n2_h2;
+		n2_h1 = n_h1;
+		n2_h2 = n_h2;
+	}
+	putchar('\n');
 	return (0);
 }
+
