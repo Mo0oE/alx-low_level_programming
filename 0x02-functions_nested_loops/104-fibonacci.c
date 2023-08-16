@@ -33,14 +33,7 @@ int main(void)
 			n_h1++;
 			n_h2 = n_h2 % 10000000000;
 		}
-		if (n_h2 % 1000000000 == 0)
-		{
-			printf(", %lu0%lu", n_h1, n_h2);
-		}
-		else
-		{
 			printf(", %lu%lu", n_h1, n_h2);
-		}
 		n1_h1 = n2_h1;
 		n1_h2 = n2_h2;
 		n2_h1 = n_h1;
