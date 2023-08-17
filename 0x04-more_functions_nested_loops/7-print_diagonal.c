@@ -2,9 +2,7 @@
 
 /**
  * print_diagonal - function
- * @n: input
- * Description: None
-*/
+ * Descript*/
 
 void print_diagonal(int n)
 {
@@ -14,8 +12,6 @@ void print_diagonal(int n)
 	{
 		for (y = 0; y < i; y++)
 			_putchar (' ');
-		_putchar ('\\');
-		_putchar ('\n');
+		_putchar (92);
 	}
-
 }
