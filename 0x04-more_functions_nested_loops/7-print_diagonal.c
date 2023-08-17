@@ -2,6 +2,7 @@
 
 /**
  * print_diagonal - function
+ * @n: input
  * Description
 */
 
