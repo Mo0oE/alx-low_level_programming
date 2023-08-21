@@ -5,7 +5,7 @@
  * @dest: input
  * @src: input
  * Description: None
- * Return: Not ur damn businesse 
+ * Return: Not ur damn business
 */
 
 char *_strcpy(char *dest, char *src)
