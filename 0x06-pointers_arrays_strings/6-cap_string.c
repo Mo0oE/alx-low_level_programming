@@ -7,7 +7,7 @@
  * Return: None
 */
 
-bool issep(char c)
+int issep(char c)
 {
 	int i = 0;
 	char *sep = " \n\t,.!?;\"(){}";
@@ -25,16 +25,20 @@ bool issep(char c)
  * Return: None
 */
 
-char *cap_string(char *str)
+char *cap_string(char *s)
 {
+	char *str = s;
 	int i = 0, c = 1;
 
 	for (; i != '\0'; i++)
 	{
-		if (c && str[i] >= 'a' && str[i] <= 'z')
-			str[i] -= 32;
 		if (issep(str[i]))
 			c = 1;
+		else if (c && str[i] >= 'a' && str[i] <= 'z')
+		{
+			str[i] -= 32;
+			c = 0;
+		}
 		else
 			c = 0;
 	}
