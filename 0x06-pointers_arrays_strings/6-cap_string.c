@@ -10,11 +10,14 @@
 int issep(char c)
 {
 	int i = 0;
-	char *sep = " \n\t,.!?;\"(){}";
+	char *sep = " \n \t , . ! ? ; \" ( ) { } ";
 
-	for (; i != '\0'; i++)
+	while (sep[i])
+	{
 		if (c == sep[i])
 			return (1);
+		i++;
+	}
 	return (0);
 }
 
@@ -30,7 +33,7 @@ char *cap_string(char *s)
 	char *str = s;
 	int i = 0, c = 1;
 
-	for (; i != '\0'; i++)
+	while (str[i])
 	{
 		if (issep(str[i]))
 			c = 1;
@@ -41,6 +44,7 @@ char *cap_string(char *s)
 		}
 		else
 			c = 0;
+		i++;
 	}
 	return (str);
 }
