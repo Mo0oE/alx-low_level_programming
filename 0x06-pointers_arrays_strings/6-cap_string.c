@@ -23,7 +23,7 @@ int issep(char c)
 
 /**
  * cap_string - function
- * @str: input
+ * @s: input
  * Description: Nine
  * Return: None
 */
