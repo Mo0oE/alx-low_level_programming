@@ -13,13 +13,15 @@ char *rot13(char *str)
 	char n[] = {"nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM"};
 	int i = 0, y;
 
-	while (str[i])
+	while (str[i] != '\0')
 	{
 		for (y = 0; y < 52; y++)
 		{
 			if (str[i] == c[y])
+			{
 				str[i] = n[y];
-			break;
+				break;
+			}
 		}
 		i++;
 	}
