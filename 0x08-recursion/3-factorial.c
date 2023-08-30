@@ -4,7 +4,8 @@
 /**
  * factorial - fu
  * @n: in
- * Return: nine*/
+ * Return: nin
+*/
 
 int factorial(int n)
 {
