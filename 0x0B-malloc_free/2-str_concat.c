@@ -12,8 +12,6 @@ char *str_concat(char *s1, char *s2)
 	int si1, si2, size, i = 0, y = 0;
 	char *str;
 
-	if (!s1 && !s2)
-		return (NULL);
 	if (!s1)
 		si1 = 0;
 	else
@@ -25,7 +23,7 @@ char *str_concat(char *s1, char *s2)
 	size = si1 + si2;
 	str = (char *) malloc(size + 1);
 
-	if (str == NULL)
+	if (str == NULL && size != 0)
 		return (NULL);
 	for (; i < size; i++)
 	{
