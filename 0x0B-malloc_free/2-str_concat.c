@@ -9,7 +9,7 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	int si1, si2,size, i = 0;
+	int si1, si2,size, i = 0, y = 0;
 	char *str;
 
 	if (!s1 && !s2)
@@ -24,7 +24,10 @@ char *str_concat(char *s1, char *s2)
 		if (i < si1)
 			str[i] = s1[i];
 		else
-			str[i] = s2[i];
+		{
+			str[i] = s2[y];
+			y++;
+		}
 	}
 	str[size] ='\0';
 	return (str);
