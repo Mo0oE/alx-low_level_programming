@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * free_grid _ fu
+ * free_grid - fu
  * @grid: in
  * @height: in
  * Description: None
