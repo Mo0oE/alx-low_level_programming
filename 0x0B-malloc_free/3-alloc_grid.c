@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * alloc_grid - fu
- * @width: in
- * @height: in
- * Return: ointer
- */
+ * str_concat - fu
+ * @s1: in
+ * @s2: in
+ * Return: pointer
+*/
 
 int **alloc_grid(int width, int height)
 {
@@ -15,15 +15,15 @@ int **alloc_grid(int width, int height)
 	if (width <= 0 || height <= 0)
 		return (NULL);
 
-	allgrid = malloc(height * sizeof(int *));
+	allgrid = calloc(height, sizeof(int *));
 
 	if (allgrid == NULL)
-		return (NULL);
+		return (0);
 
-	for (i = 0; i < height; i++)
+	for (i =0; i < height; i++)
 	{
-		allgrid[i] = malloc(width * sizeof(int));
-		if (allgrid[i] == NULL)
+		allgrid[i] = calloc(width, sizeof(int));
+		if(allgrid[i] == NULL)
 		{
 			for (; i >= 0; i--)
 				free(allgrid[i]);
@@ -31,8 +31,5 @@ int **alloc_grid(int width, int height)
 			return (NULL);
 		}
 	}
-	for (i = 0; i < height; i++)
-		for (y = 0; y < width; y++)
-			allgrid[i][y] = 0;
 	return (allgrid);
 }
