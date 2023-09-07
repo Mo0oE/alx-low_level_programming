@@ -4,6 +4,7 @@
  * _realloc - fu
  * @old_size: in
  * @new_size: in
+ * @ptr: in
  * Return: pointer
 */
 
@@ -27,7 +28,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		return (arr);
 	while (--old_size)
 		arr[old_size] = *(int *)ptr;
-
+	free(ptr);
 	return (arr);
 
 }
