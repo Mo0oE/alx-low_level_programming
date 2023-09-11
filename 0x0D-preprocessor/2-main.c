@@ -1,4 +1,4 @@
-#define name() printf("%s\n", __file__) 
+#define name() printf("%s\n", __FILE__) 
 
 /**
  * main - fu
