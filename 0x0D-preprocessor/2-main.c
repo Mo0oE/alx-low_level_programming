@@ -1,4 +1,4 @@
-#define name() printf("%s\n", __FILE__) 
+#include <stdio.h>
 
 /**
  * main - fu
@@ -8,6 +8,6 @@
 
 int main()
 {
-	name();
+	printf ("%s\n", __FILE__);
 	return (0);
 }
