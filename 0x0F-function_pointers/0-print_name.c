@@ -5,8 +5,8 @@
 /**
  * print_name - fu
  * @name: in
- * @fu: in fu
- * Description: none 
+ * @f: in fu
+ * Description: none
 */
 
 void print_name(char *name, void (*f)(char *))
