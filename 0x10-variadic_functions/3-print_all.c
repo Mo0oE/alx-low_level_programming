@@ -61,7 +61,7 @@ void printstring(char *s, va_list args)
 
 void print_all(const char * const format, ...)
 {
-	int size = strlen(format), i = 0, j;
+	int i = 0, j;
 	va_list args;
 	char *chk = "ifcs";
 	char *sep = "";
@@ -69,7 +69,7 @@ void print_all(const char * const format, ...)
 
 
 	va_start(args, format);
-	while (i < size && format[i])
+	while (format && format[i])
 	{
 		j = 0;
 		while (j < 4)
