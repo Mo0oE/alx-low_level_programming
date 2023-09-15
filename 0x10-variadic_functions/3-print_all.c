@@ -69,7 +69,7 @@ void print_all(const char * const format, ...)
 	void (*fu[])() = {printint, printfloat, printchar, printstring};
 
 	va_start(args, format);
-	while (i < size)
+	while (i < size && format)
 	{
 		j = 0;
 		while (j < 4)
