@@ -1,21 +1,21 @@
 #include "lists.h"
 
 /**
- * print_listint - fu
- * @h: in
+ * print_listint - function
+ * @h: input
  *
- * Return: count
+ * Return: count of elements
  */
 
 size_t print_listint(const listint_t *h)
 {
-	size_t count = 0;
+	size_t i = 0;
 
 	while (h)
 	{
 		printf("%d\n", h->n);
-		count++;
 		h = h->next;
+		i++;
 	}
-	return (count);
+	return (i);
 }
