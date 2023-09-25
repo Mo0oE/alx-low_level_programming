@@ -4,7 +4,7 @@
  * print_listint - function
  * @h: input
  *
- * Return: count of elements
+ * count of elements
  */
 
 size_t print_listint(const listint_t *h)
