@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * add_nodeint_int - fu
+ * add_nodeint_end - fu
  * @head: in
  * @n: in
  * Return: pointer
