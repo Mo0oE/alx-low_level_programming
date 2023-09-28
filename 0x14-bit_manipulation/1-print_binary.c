@@ -8,11 +8,18 @@
 
 void print_binary(unsigned long int n)
 {
-	if (n == 0)
-	{
-		return;
-	}
+	int printed = 0, nums = sizeof(n) * 8;
 
-	print_binary(n / 2);
-	_putchar('0' + (n % 2));
+	while (nums)
+	{
+		if (n & 1l << --nums)
+		{
+			_putchar('1');
+			printed++;
+		}
+		else if (printed)
+			_putchar('0');
+	}
+	if (!printed)
+		_putchar('0');
 }
