@@ -1,4 +1,9 @@
 #include "lists.h"
+#include <stdlib.h>
+#include <string.h>
+#include <stddef.h>
+#include <stdio.h>
+
 /**
  * insert_dnodeint_at_index - Insert a node in the postion
  * @h: Pointer to direction of the head
@@ -6,6 +11,7 @@
  * @idx: Position at the insert the new node
  * Return: The direction of the new node
  */
+
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *new_mem, *res_mem = *h;
